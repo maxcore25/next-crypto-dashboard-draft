@@ -1,8 +1,22 @@
-import { Paper } from '@mui/material';
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Paper,
+  Select,
+  TextField,
+} from '@mui/material';
 import { Box } from '@mui/system';
+import { useState } from 'react';
 import ExchangeRate from '../ExchangeRate';
 
 const CurrencyConverter = () => {
+  const [age, setAge] = useState('');
+
+  const handleChange = event => {
+    setAge(event.target.value);
+  };
+
   return (
     <Paper>
       <Box
@@ -13,49 +27,44 @@ const CurrencyConverter = () => {
           gap: 2,
         }}>
         <div>
-          <table>
-            <tbody>
-              <tr>
-                <td>Primary Currency:</td>
-                <td>
-                  <input
-                    type='number'
-                    name='currency-amount-1'
-                    value={''}
-                    onChange={e => console.log(e.target.value)}
-                  />
-                </td>
-                <td>
-                  <select
-                    value={'chosenPrimaryCurrency'}
-                    name='currency-option-1'
-                    className='currency-options'
-                    onChange={e => console.log(e.target.value)}>
-                    <option>{'currency'}</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td>Secondary Currency:</td>
-                <td>
-                  <input
-                    name='currency-amount-2'
-                    value={'result'}
-                    disabled={true}
-                  />
-                </td>
-                <td>
-                  <select
-                    value={'chosenSecondaryCurrency'}
-                    name='currency-option-2'
-                    className='currency-options'
-                    onChange={e => console.log(e.target.value)}>
-                    <option>{'currency'}</option>
-                  </select>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div>
+            <TextField
+              id='outlined-basic'
+              label='Primary Currency'
+              variant='outlined'
+            />
+            <Box sx={{ minWidth: 120 }}>
+              <FormControl fullWidth>
+                <Select
+                  id='demo-simple-select'
+                  value={age}
+                  onChange={handleChange}>
+                  <MenuItem value={10}>Ten</MenuItem>
+                  <MenuItem value={20}>Twenty</MenuItem>
+                  <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
+          </div>
+          <div>
+            <TextField
+              id='outlined-basic'
+              label='Secondary Currency'
+              variant='outlined'
+            />
+            <Box sx={{ minWidth: 120 }}>
+              <FormControl fullWidth>
+                <Select
+                  id='demo-simple-select'
+                  value={age}
+                  onChange={handleChange}>
+                  <MenuItem value={10}>Ten</MenuItem>
+                  <MenuItem value={20}>Twenty</MenuItem>
+                  <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
+          </div>
         </div>
         <ExchangeRate />
       </Box>
