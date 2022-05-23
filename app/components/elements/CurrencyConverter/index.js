@@ -27,7 +27,7 @@ const CurrencyConverter = () => {
           gridTemplateRows: { md: '1fr 1fr' },
           gap: 2,
         }}>
-        <div>
+        <div className={styles.inputsGrid}>
           <div className={styles.inputContainer}>
             <TextField
               id='outlined-basic'

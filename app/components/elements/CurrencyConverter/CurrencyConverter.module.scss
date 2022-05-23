@@ -1,2 +1,10 @@
-.inputContainer {
+.inputsGrid {
+  display: grid;
+  gap: 24px;
+
+  .inputContainer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+  }
 }
