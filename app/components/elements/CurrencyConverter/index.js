@@ -1,3 +1,4 @@
+import styles from './CurrencyConverter.module.scss';
 import {
   FormControl,
   InputLabel,
@@ -27,7 +28,7 @@ const CurrencyConverter = () => {
           gap: 2,
         }}>
         <div>
-          <div>
+          <div className={styles.inputContainer}>
             <TextField
               id='outlined-basic'
               label='Primary Currency'
@@ -46,7 +47,7 @@ const CurrencyConverter = () => {
               </FormControl>
             </Box>
           </div>
-          <div>
+          <div className={styles.inputContainer}>
             <TextField
               id='outlined-basic'
               label='Secondary Currency'
