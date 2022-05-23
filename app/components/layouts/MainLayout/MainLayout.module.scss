@@ -1,8 +1,14 @@
 .section {
   display: grid;
   place-content: center;
-  grid-template-columns: 1fr 1fr;
+  gap: 32px;
   margin: 0 auto;
   max-width: 1300px;
   height: 100vh;
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
 }
