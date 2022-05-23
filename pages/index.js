@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import NewFeed from '../app/components/NewFeed';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
           content='Pet Project "Crypto Dashboard" Using Next.js'
         />
       </Head>
+      <NewFeed />
     </div>
   );
 }
