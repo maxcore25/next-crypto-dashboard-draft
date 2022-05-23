@@ -1,5 +1,6 @@
 import styles from './CurrencyConverter.module.scss';
 import {
+  Button,
   FormControl,
   InputLabel,
   MenuItem,
@@ -62,6 +63,7 @@ const CurrencyConverter = () => {
               </FormControl>
             </Box>
           </div>
+          <Button variant='contained'>Convert</Button>
         </div>
         <ExchangeRate />
       </Box>
