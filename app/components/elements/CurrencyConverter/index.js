@@ -57,7 +57,7 @@ const CurrencyConverter = () => {
                 label='Secondary Currency'
                 variant='outlined'
                 inputProps={{
-                  name: 'currency-amount-1',
+                  name: 'currency-amount-2',
                 }}
               />
               <Box sx={{ minWidth: 120 }}>
