@@ -36,10 +36,8 @@ const CurrencyConverter = () => {
             />
             <Box sx={{ minWidth: 120 }}>
               <FormControl fullWidth>
-                <Select
-                  id='demo-simple-select'
-                  value={age}
-                  onChange={handleChange}>
+                <Select displayEmpty value={age} onChange={handleChange}>
+                  <MenuItem value=''>BTC</MenuItem>
                   <MenuItem value={10}>Ten</MenuItem>
                   <MenuItem value={20}>Twenty</MenuItem>
                   <MenuItem value={30}>Thirty</MenuItem>
@@ -55,10 +53,8 @@ const CurrencyConverter = () => {
             />
             <Box sx={{ minWidth: 120 }}>
               <FormControl fullWidth>
-                <Select
-                  id='demo-simple-select'
-                  value={age}
-                  onChange={handleChange}>
+                <Select displayEmpty value={age} onChange={handleChange}>
+                  <MenuItem value=''>Empty</MenuItem>
                   <MenuItem value={10}>Ten</MenuItem>
                   <MenuItem value={20}>Twenty</MenuItem>
                   <MenuItem value={30}>Thirty</MenuItem>
