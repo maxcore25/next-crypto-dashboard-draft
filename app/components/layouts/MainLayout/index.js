@@ -5,11 +5,11 @@ import CurrencyConverter from '../../elements/CurrencyConverter';
 
 const MainLayout = () => {
   return (
-    <div className={styles.block}>
+    <section className={styles.section}>
       <CustomHead />
       <CurrencyConverter />
       <NewsFeed />
-    </div>
+    </section>
   );
 };
 
