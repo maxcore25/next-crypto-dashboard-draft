@@ -21,13 +21,8 @@ const CurrencyConverter = () => {
 
   return (
     <Paper>
-      <Box
-        sx={{
-          p: 2,
-          display: 'grid',
-          gridTemplateRows: { md: '1fr 1fr' },
-          gap: 2,
-        }}>
+      <div className={styles.mainGrid}>
+        <h2>Currency Converter</h2>
         <div className={styles.inputsGrid}>
           <div className={styles.inputContainer}>
             <TextField
@@ -84,7 +79,7 @@ const CurrencyConverter = () => {
           <Button variant='contained'>Convert</Button>
         </div>
         <ExchangeRate />
-      </Box>
+      </div>
     </Paper>
   );
 };

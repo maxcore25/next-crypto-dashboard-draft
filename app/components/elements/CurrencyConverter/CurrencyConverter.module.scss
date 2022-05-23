@@ -1,10 +1,21 @@
-.inputsGrid {
+.mainGrid {
   display: grid;
-  gap: 24px;
+  grid-template-rows: auto 1fr 1fr;
+  gap: 16px;
+  padding: 16px;
 
-  .inputContainer {
+  h2 {
+    text-align: center;
+  }
+
+  .inputsGrid {
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 16px;
+    gap: 24px;
+
+    .inputContainer {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+    }
   }
 }
