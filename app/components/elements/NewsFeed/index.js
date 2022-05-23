@@ -7,7 +7,7 @@ const NewsFeed = () => {
       <div className={styles.mainGrid}>
         <h2>News Feed</h2>
         <div className={styles.newsGrid}>
-          <a href=''>
+          <a href='' className={styles.newsCardLink}>
             <Paper
               elevation={3}
               sx={{ borderRadius: '12px' }}
