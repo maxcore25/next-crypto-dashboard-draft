@@ -34,14 +34,23 @@ const CurrencyConverter = () => {
               id='outlined-basic'
               label='Primary Currency'
               variant='outlined'
+              inputProps={{
+                name: 'currency-amount-1',
+              }}
             />
             <Box sx={{ minWidth: 120 }}>
               <FormControl fullWidth>
-                <Select displayEmpty value={age} onChange={handleChange}>
-                  <MenuItem value=''>BTC</MenuItem>
-                  <MenuItem value={10}>Ten</MenuItem>
-                  <MenuItem value={20}>Twenty</MenuItem>
-                  <MenuItem value={30}>Thirty</MenuItem>
+                <Select
+                  defaultValue={0}
+                  // value={age}
+                  onChange={handleChange}
+                  inputProps={{
+                    name: 'currency-option-1',
+                  }}>
+                  <MenuItem value={0}>BTC</MenuItem>
+                  <MenuItem value={1}>Ten</MenuItem>
+                  <MenuItem value={2}>Twenty</MenuItem>
+                  <MenuItem value={3}>Thirty</MenuItem>
                 </Select>
               </FormControl>
             </Box>
@@ -51,14 +60,23 @@ const CurrencyConverter = () => {
               id='outlined-basic'
               label='Secondary Currency'
               variant='outlined'
+              inputProps={{
+                name: 'currency-amount-1',
+              }}
             />
             <Box sx={{ minWidth: 120 }}>
               <FormControl fullWidth>
-                <Select displayEmpty value={age} onChange={handleChange}>
-                  <MenuItem value=''>Empty</MenuItem>
-                  <MenuItem value={10}>Ten</MenuItem>
-                  <MenuItem value={20}>Twenty</MenuItem>
-                  <MenuItem value={30}>Thirty</MenuItem>
+                <Select
+                  defaultValue={0}
+                  // value={age}
+                  onChange={handleChange}
+                  inputProps={{
+                    name: 'currency-option-2',
+                  }}>
+                  <MenuItem value={0}>Empty</MenuItem>
+                  <MenuItem value={1}>Ten</MenuItem>
+                  <MenuItem value={2}>Twenty</MenuItem>
+                  <MenuItem value={3}>Thirty</MenuItem>
                 </Select>
               </FormControl>
             </Box>
