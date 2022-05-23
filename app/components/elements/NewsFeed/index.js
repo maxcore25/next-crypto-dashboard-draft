@@ -1,5 +1,7 @@
-const NewFeed = () => {
-  return <div>NewFeed</div>;
+import styles from './NewsFeed.module.scss';
+
+const NewsFeed = () => {
+  return <div>NewsFeed</div>;
 };
 
-export default NewFeed;
+export default NewsFeed;
