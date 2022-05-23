@@ -23,61 +23,63 @@ const CurrencyConverter = () => {
     <Paper elevation={3} sx={{ borderRadius: '12px' }}>
       <div className={styles.mainGrid}>
         <h2>Currency Converter</h2>
-        <div className={styles.inputsGrid}>
-          <div className={styles.inputContainer}>
-            <TextField
-              id='outlined-basic'
-              label='Primary Currency'
-              variant='outlined'
-              inputProps={{
-                name: 'currency-amount-1',
-              }}
-            />
-            <Box sx={{ minWidth: 120 }}>
-              <FormControl fullWidth>
-                <Select
-                  defaultValue={0}
-                  // value={age}
-                  onChange={handleChange}
-                  inputProps={{
-                    name: 'currency-option-1',
-                  }}>
-                  <MenuItem value={0}>BTC</MenuItem>
-                  <MenuItem value={1}>Ten</MenuItem>
-                  <MenuItem value={2}>Twenty</MenuItem>
-                  <MenuItem value={3}>Thirty</MenuItem>
-                </Select>
-              </FormControl>
-            </Box>
+        <Paper elevation={3} sx={{ borderRadius: '12px', p: '16px' }}>
+          <div className={styles.inputsGrid}>
+            <div className={styles.inputContainer}>
+              <TextField
+                id='outlined-basic'
+                label='Primary Currency'
+                variant='outlined'
+                inputProps={{
+                  name: 'currency-amount-1',
+                }}
+              />
+              <Box sx={{ minWidth: 120 }}>
+                <FormControl fullWidth>
+                  <Select
+                    defaultValue={0}
+                    // value={age}
+                    onChange={handleChange}
+                    inputProps={{
+                      name: 'currency-option-1',
+                    }}>
+                    <MenuItem value={0}>BTC</MenuItem>
+                    <MenuItem value={1}>Ten</MenuItem>
+                    <MenuItem value={2}>Twenty</MenuItem>
+                    <MenuItem value={3}>Thirty</MenuItem>
+                  </Select>
+                </FormControl>
+              </Box>
+            </div>
+            <div className={styles.inputContainer}>
+              <TextField
+                id='outlined-basic'
+                label='Secondary Currency'
+                variant='outlined'
+                inputProps={{
+                  name: 'currency-amount-1',
+                }}
+              />
+              <Box sx={{ minWidth: 120 }}>
+                <FormControl fullWidth>
+                  <Select
+                    defaultValue={0}
+                    // value={age}
+                    onChange={handleChange}
+                    inputProps={{
+                      name: 'currency-option-2',
+                    }}>
+                    <MenuItem value={0}>Empty</MenuItem>
+                    <MenuItem value={1}>Ten</MenuItem>
+                    <MenuItem value={2}>Twenty</MenuItem>
+                    <MenuItem value={3}>Thirty</MenuItem>
+                  </Select>
+                </FormControl>
+              </Box>
+            </div>
+            <Button variant='contained'>Convert</Button>
           </div>
-          <div className={styles.inputContainer}>
-            <TextField
-              id='outlined-basic'
-              label='Secondary Currency'
-              variant='outlined'
-              inputProps={{
-                name: 'currency-amount-1',
-              }}
-            />
-            <Box sx={{ minWidth: 120 }}>
-              <FormControl fullWidth>
-                <Select
-                  defaultValue={0}
-                  // value={age}
-                  onChange={handleChange}
-                  inputProps={{
-                    name: 'currency-option-2',
-                  }}>
-                  <MenuItem value={0}>Empty</MenuItem>
-                  <MenuItem value={1}>Ten</MenuItem>
-                  <MenuItem value={2}>Twenty</MenuItem>
-                  <MenuItem value={3}>Thirty</MenuItem>
-                </Select>
-              </FormControl>
-            </Box>
-          </div>
-          <Button variant='contained'>Convert</Button>
-        </div>
+        </Paper>
         <ExchangeRate />
       </div>
     </Paper>
