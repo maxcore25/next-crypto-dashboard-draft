@@ -2,7 +2,6 @@ import styles from './CurrencyConverter.module.scss';
 import {
   Button,
   FormControl,
-  InputLabel,
   MenuItem,
   Paper,
   Select,
@@ -16,9 +15,9 @@ import { CURRENCIES } from '../../../constants';
 const CurrencyConverter = () => {
   const [age, setAge] = useState('');
 
-  const handleChange = event => {
-    setAge(event.target.value);
-  };
+  // const handleChange = event => {
+  //   setAge(event.target.value);
+  // };
 
   return (
     <Paper elevation={3} sx={{ borderRadius: '12px' }}>
@@ -40,7 +39,7 @@ const CurrencyConverter = () => {
                   <Select
                     defaultValue={0}
                     // value={age}
-                    onChange={handleChange}
+                    // onChange={handleChange}
                     inputProps={{
                       name: 'currency-option-1',
                     }}>
@@ -67,7 +66,7 @@ const CurrencyConverter = () => {
                   <Select
                     defaultValue={2}
                     // value={age}
-                    onChange={handleChange}
+                    // onChange={handleChange}
                     inputProps={{
                       name: 'currency-option-2',
                     }}>
