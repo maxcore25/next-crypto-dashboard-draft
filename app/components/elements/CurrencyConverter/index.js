@@ -29,7 +29,7 @@ const CurrencyConverter = () => {
             <div className={styles.inputContainer}>
               <TextField
                 id='outlined-basic'
-                label='Primary Currency'
+                label='Currency 1'
                 variant='outlined'
                 inputProps={{
                   name: 'currency-amount-1',
@@ -56,7 +56,7 @@ const CurrencyConverter = () => {
             <div className={styles.inputContainer}>
               <TextField
                 id='outlined-basic'
-                label='Secondary Currency'
+                label='Currency 2'
                 variant='outlined'
                 inputProps={{
                   name: 'currency-amount-2',
