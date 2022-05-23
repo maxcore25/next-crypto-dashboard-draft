@@ -1,5 +1,8 @@
 .section {
   display: grid;
   place-content: center;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  max-width: 1300px;
   height: 100vh;
 }

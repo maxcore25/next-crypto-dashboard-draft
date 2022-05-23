@@ -8,6 +8,7 @@ const MainLayout = () => {
     <>
       <CustomHead />
       <section className={styles.section}>
+        <h1>Crypto Dashboard</h1>
         <CurrencyConverter />
         <NewsFeed />
       </section>

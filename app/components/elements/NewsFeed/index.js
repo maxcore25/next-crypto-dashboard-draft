@@ -1,5 +1,5 @@
 const NewFeed = () => {
-  return <div>Enter</div>;
+  return <div>NewFeed</div>;
 };
 
 export default NewFeed;
