@@ -1,16 +1,71 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Roboto&family=Ubuntu&display=swap');
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Root Variables ===== */
+:root {
+  --grid-column-amount: 4;
+  --border-radius-1: 12px;
+  --accent-clr: #2f8af5;
+  --text-clr: #fff;
+  --bg-lvl-1-clr: #16161c;
+  --primary-font: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* ===== Body Styles ===== */
+body {
+  color: var(--text-clr);
+  background-color: var(--bg-lvl-1-clr);
+  // line-height: 1.5;
+  font-family: var(--primary-font);
+  -webkit-font-smoothing: antialiased;
+  font-size: clamp(13px, 10px + 1vmin, 15px);
+}
+
+/* ===== Selection ===== */
+::selection {
+  background: var(--accent-clr);
+  color: #fff;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 9px;
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gray-30-clr);
+  border-radius: 6px;
+}
+
+/* ===== Small Common Styles ===== */
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+ul {
+  list-style: none;
+}
+button {
+  font-family: var(--primary-font);
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+input {
+  color: var(--text-clr);
+  outline: none;
+
+  &::placeholder {
+    color: var(--bg-lvl-1-clr);
+  }
 }
