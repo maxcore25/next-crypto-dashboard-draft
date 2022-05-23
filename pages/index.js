@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import NewFeed from '../app/components/NewFeed';
+import NewFeed from '../app/components/NewsFeed';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
