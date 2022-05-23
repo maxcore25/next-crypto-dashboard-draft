@@ -20,7 +20,7 @@ const CurrencyConverter = () => {
   };
 
   return (
-    <Paper>
+    <Paper elevation={3}>
       <div className={styles.mainGrid}>
         <h2>Currency Converter</h2>
         <div className={styles.inputsGrid}>

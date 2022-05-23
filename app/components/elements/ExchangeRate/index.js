@@ -1,5 +1,7 @@
+import { Paper } from '@mui/material';
+
 const ExchangeRate = () => {
-  return <div>ExchangeRate</div>;
+  return <Paper elevation={3}>ExchangeRate</Paper>;
 };
 
 export default ExchangeRate;
