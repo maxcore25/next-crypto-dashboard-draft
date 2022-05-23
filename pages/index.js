@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import NewFeed from '../app/components/NewFeed';
 import styles from '../styles/Home.module.scss';
 
