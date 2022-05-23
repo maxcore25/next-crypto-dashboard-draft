@@ -1,1 +1,1 @@
-const currencies = ['BTC', 'ETH', 'USD', 'XRP', 'LTC', 'ADA'];
+export const CURRENCIES = ['BTC', 'ETH', 'USD', 'XRP', 'LTC', 'ADA'];

@@ -11,6 +11,7 @@ import {
 import { Box } from '@mui/system';
 import { useState } from 'react';
 import ExchangeRate from '../ExchangeRate';
+import { CURRENCIES } from '../../../constants';
 
 const CurrencyConverter = () => {
   const [age, setAge] = useState('');
@@ -43,10 +44,11 @@ const CurrencyConverter = () => {
                     inputProps={{
                       name: 'currency-option-1',
                     }}>
-                    <MenuItem value={0}>BTC</MenuItem>
-                    <MenuItem value={1}>Ten</MenuItem>
-                    <MenuItem value={2}>Twenty</MenuItem>
-                    <MenuItem value={3}>Thirty</MenuItem>
+                    {CURRENCIES.map((currency, index) => (
+                      <MenuItem key={currency} value={index}>
+                        {currency}
+                      </MenuItem>
+                    ))}
                   </Select>
                 </FormControl>
               </Box>
