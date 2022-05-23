@@ -1,5 +1,5 @@
 const ExchangeRate = () => {
-  return <div>Enter</div>;
+  return <div>ExchangeRate</div>;
 };
 
 export default ExchangeRate;
