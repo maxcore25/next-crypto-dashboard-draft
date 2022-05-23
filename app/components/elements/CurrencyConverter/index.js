@@ -35,7 +35,7 @@ const CurrencyConverter = () => {
                   name: 'currency-amount-1',
                 }}
               />
-              <Box sx={{ minWidth: 120 }}>
+              <Box sx={{ width: 85 }}>
                 <FormControl fullWidth>
                   <Select
                     defaultValue={0}
@@ -62,19 +62,20 @@ const CurrencyConverter = () => {
                   name: 'currency-amount-2',
                 }}
               />
-              <Box sx={{ minWidth: 120 }}>
+              <Box sx={{ width: 85 }}>
                 <FormControl fullWidth>
                   <Select
-                    defaultValue={0}
+                    defaultValue={2}
                     // value={age}
                     onChange={handleChange}
                     inputProps={{
                       name: 'currency-option-2',
                     }}>
-                    <MenuItem value={0}>Empty</MenuItem>
-                    <MenuItem value={1}>Ten</MenuItem>
-                    <MenuItem value={2}>Twenty</MenuItem>
-                    <MenuItem value={3}>Thirty</MenuItem>
+                    {CURRENCIES.map((currency, index) => (
+                      <MenuItem key={currency} value={index}>
+                        {currency}
+                      </MenuItem>
+                    ))}
                   </Select>
                 </FormControl>
               </Box>
