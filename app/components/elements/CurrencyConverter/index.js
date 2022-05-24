@@ -118,7 +118,7 @@ const CurrencyConverter = () => {
             </Button>
           </div>
         </Paper>
-        <ExchangeRate />
+        <ExchangeRate exchangeRate={exchangeRate} />
       </div>
     </Paper>
   );
