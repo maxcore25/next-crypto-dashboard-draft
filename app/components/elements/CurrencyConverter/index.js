@@ -13,8 +13,8 @@ import ExchangeRate from '../ExchangeRate';
 import { CURRENCIES } from '../../../constants';
 
 const CurrencyConverter = () => {
-  const [chosenPrimaryCurrency, setChosenPrimaryCurrency] = useState();
-  const [chosenSecondaryCurrency, setChosenSecondaryCurrency] = useState();
+  const [chosenPrimaryCurrency, setChosenPrimaryCurrency] = useState('BTC');
+  const [chosenSecondaryCurrency, setChosenSecondaryCurrency] = useState('USD');
 
   return (
     <Paper elevation={3} sx={{ borderRadius: '12px' }}>
@@ -34,14 +34,13 @@ const CurrencyConverter = () => {
               <Box sx={{ width: 85 }}>
                 <FormControl fullWidth>
                   <Select
-                    defaultValue={0}
-                    // value={age}
+                    value={chosenPrimaryCurrency}
                     onChange={e => setChosenPrimaryCurrency(e.target.value)}
                     inputProps={{
                       name: 'currency-option-1',
                     }}>
-                    {CURRENCIES.map((currency, index) => (
-                      <MenuItem key={currency} value={index}>
+                    {CURRENCIES.map(currency => (
+                      <MenuItem key={currency} value={currency}>
                         {currency}
                       </MenuItem>
                     ))}
@@ -61,14 +60,13 @@ const CurrencyConverter = () => {
               <Box sx={{ width: 85 }}>
                 <FormControl fullWidth>
                   <Select
-                    defaultValue={2}
-                    // value={age}
+                    value={chosenSecondaryCurrency}
                     onChange={e => setChosenSecondaryCurrency(e.target.value)}
                     inputProps={{
                       name: 'currency-option-2',
                     }}>
-                    {CURRENCIES.map((currency, index) => (
-                      <MenuItem key={currency} value={index}>
+                    {CURRENCIES.map(currency => (
+                      <MenuItem key={currency} value={currency}>
                         {currency}
                       </MenuItem>
                     ))}
