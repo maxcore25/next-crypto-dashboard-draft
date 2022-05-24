@@ -15,6 +15,7 @@ import { CURRENCIES } from '../../../constants';
 const CurrencyConverter = () => {
   const [chosenPrimaryCurrency, setChosenPrimaryCurrency] = useState('BTC');
   const [chosenSecondaryCurrency, setChosenSecondaryCurrency] = useState('USD');
+  const [amount, setAmount] = useState(1);
 
   return (
     <Paper elevation={3} sx={{ borderRadius: '12px' }}>
@@ -24,6 +25,8 @@ const CurrencyConverter = () => {
           <div className={styles.inputsGrid}>
             <div className={styles.inputContainer}>
               <TextField
+                value={amount}
+                onChange={e => setAmount(e.target.value)}
                 id='outlined-basic'
                 label='Currency 1'
                 variant='outlined'
