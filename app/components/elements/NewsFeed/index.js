@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const NewsFeed = () => {
-  const [articles, setArticles] = useState([]);
+  const [articles, setArticles] = useState();
 
   useEffect(() => {
     const options = {
@@ -20,7 +20,7 @@ const NewsFeed = () => {
       .request(options)
       .then(response => {
         console.log(response.data);
-        setArticles(response.data);
+        setArticles(response.data.slice(0, 7));
       })
       .catch(error => {
         console.error(error);
@@ -32,7 +32,7 @@ const NewsFeed = () => {
       <div className={styles.mainGrid}>
         <h2>News Feed</h2>
         <div className={styles.newsGrid}>
-          {articles.map((article, index) => (
+          {articles?.map((article, index) => (
             <a key={index} href={article.url} className={styles.newsCardLink}>
               <Paper
                 elevation={3}
