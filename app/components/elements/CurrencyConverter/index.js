@@ -18,6 +18,7 @@ const CurrencyConverter = () => {
   const [chosenSecondaryCurrency, setChosenSecondaryCurrency] = useState('USD');
   const [amount, setAmount] = useState(1);
   const [exchangeRate, setExchangeRate] = useState(0);
+  const [result, setResult] = useState(0);
 
   const convert = () => {
     const options = {
@@ -40,6 +41,10 @@ const CurrencyConverter = () => {
         console.log(response.data);
         setExchangeRate(
           response.data['Realtime Currency Exchange Rate']['5. Exchange Rate']
+        );
+        setResult(
+          response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'] *
+            amount
         );
       })
       .catch(error => {
@@ -83,6 +88,7 @@ const CurrencyConverter = () => {
             </div>
             <div className={styles.inputContainer}>
               <TextField
+                value={result}
                 id='outlined-basic'
                 label='Currency 2'
                 variant='outlined'
