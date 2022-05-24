@@ -1,9 +1,11 @@
 import styles from './NewsFeed.module.scss';
 import { Paper } from '@mui/material';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const NewsFeed = () => {
+  const [articles, setArticles] = useState([]);
+
   useEffect(() => {
     const options = {
       method: 'GET',
@@ -18,6 +20,7 @@ const NewsFeed = () => {
       .request(options)
       .then(response => {
         console.log(response.data);
+        setArticles(response.data);
       })
       .catch(error => {
         console.error(error);
@@ -29,14 +32,16 @@ const NewsFeed = () => {
       <div className={styles.mainGrid}>
         <h2>News Feed</h2>
         <div className={styles.newsGrid}>
-          <a href='' className={styles.newsCardLink}>
-            <Paper
-              elevation={3}
-              sx={{ borderRadius: '12px' }}
-              className={styles.newsCard}>
-              <h4>Hello</h4>
-            </Paper>
-          </a>
+          {articles.map((article, index) => (
+            <a key={index} href={article.url} className={styles.newsCardLink}>
+              <Paper
+                elevation={3}
+                sx={{ borderRadius: '12px' }}
+                className={styles.newsCard}>
+                <h4>{article.title}</h4>
+              </Paper>
+            </a>
+          ))}
         </div>
       </div>
     </Paper>
