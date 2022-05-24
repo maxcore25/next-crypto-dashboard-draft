@@ -23,9 +23,9 @@ const CurrencyConverter = () => {
       method: 'GET',
       url: 'https://alpha-vantage.p.rapidapi.com/query',
       params: {
-        from_currency: 'BTC',
+        from_currency: chosenPrimaryCurrency,
         function: 'CURRENCY_EXCHANGE_RATE',
-        to_currency: 'USD',
+        to_currency: chosenSecondaryCurrency,
       },
       headers: {
         'X-RapidAPI-Host': 'alpha-vantage.p.rapidapi.com',
@@ -35,10 +35,10 @@ const CurrencyConverter = () => {
 
     axios
       .request(options)
-      .then(function (response) {
+      .then(response => {
         console.log(response.data);
       })
-      .catch(function (error) {
+      .catch(error => {
         console.error(error);
       });
   };
