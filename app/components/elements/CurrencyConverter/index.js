@@ -23,11 +23,9 @@ const CurrencyConverter = () => {
       method: 'GET',
       url: 'https://alpha-vantage.p.rapidapi.com/query',
       params: {
-        interval: '5min',
-        function: 'TIME_SERIES_INTRADAY',
-        symbol: 'MSFT',
-        datatype: 'json',
-        output_size: 'compact',
+        from_currency: 'BTC',
+        function: 'CURRENCY_EXCHANGE_RATE',
+        to_currency: 'USD',
       },
       headers: {
         'X-RapidAPI-Host': 'alpha-vantage.p.rapidapi.com',
