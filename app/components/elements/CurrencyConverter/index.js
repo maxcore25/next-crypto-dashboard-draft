@@ -13,11 +13,7 @@ import ExchangeRate from '../ExchangeRate';
 import { CURRENCIES } from '../../../constants';
 
 const CurrencyConverter = () => {
-  const [age, setAge] = useState('');
-
-  // const handleChange = event => {
-  //   setAge(event.target.value);
-  // };
+  const [chosenPrimaryCurrency, setChosenPrimaryCurrency] = useState();
 
   return (
     <Paper elevation={3} sx={{ borderRadius: '12px' }}>
@@ -39,7 +35,7 @@ const CurrencyConverter = () => {
                   <Select
                     defaultValue={0}
                     // value={age}
-                    // onChange={handleChange}
+                    onChange={e => setChosenPrimaryCurrency(e.target.value)}
                     inputProps={{
                       name: 'currency-option-1',
                     }}>
