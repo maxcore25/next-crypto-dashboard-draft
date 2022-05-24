@@ -38,6 +38,9 @@ const CurrencyConverter = () => {
       .request(options)
       .then(response => {
         console.log(response.data);
+        setExchangeRate(
+          response.data['Realtime Currency Exchange Rate']['5. Exchange Rate']
+        );
       })
       .catch(error => {
         console.error(error);
