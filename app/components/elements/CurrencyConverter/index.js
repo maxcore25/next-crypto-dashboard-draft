@@ -20,6 +20,12 @@ const CurrencyConverter = () => {
   const [exchangeRate, setExchangeRate] = useState(0);
   const [result, setResult] = useState(0);
 
+  const [exchangedData, setExchangedData] = useState({
+    primaryCurrency: 'BTC',
+    secondaryCurrency: 'USD',
+    exchangeRate: 0,
+  });
+
   const convert = () => {
     const options = {
       method: 'GET',
@@ -46,6 +52,14 @@ const CurrencyConverter = () => {
           response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'] *
             amount
         );
+        setExchangedData({
+          primaryCurrency: chosenPrimaryCurrency,
+          secondaryCurrency: chosenSecondaryCurrency,
+          exchangeRate:
+            response.data['Realtime Currency Exchange Rate'][
+              '5. Exchange Rate'
+            ],
+        });
       })
       .catch(error => {
         console.error(error);
@@ -119,11 +133,7 @@ const CurrencyConverter = () => {
             </Button>
           </div>
         </Paper>
-        <ExchangeRate
-          exchangeRate={exchangeRate}
-          chosenPrimaryCurrency={chosenPrimaryCurrency}
-          chosenSecondaryCurrency={chosenSecondaryCurrency}
-        />
+        <ExchangeRate exchangedData={exchangedData} />
       </div>
     </Paper>
   );
