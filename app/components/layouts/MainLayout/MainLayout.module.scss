@@ -21,6 +21,9 @@
 }
 
 @media (min-width: a.$breakpoint-1) {
+  .section {
+    padding: 12px;
+  }
   .content {
     grid-template-columns: 1fr 1fr;
   }
