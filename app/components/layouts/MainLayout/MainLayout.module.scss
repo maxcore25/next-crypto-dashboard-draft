@@ -6,7 +6,6 @@
   gap: 32px;
   padding: 12px;
   margin: 0 auto;
-  max-width: 1300px;
   min-height: 100vh;
 
   h1 {
@@ -17,6 +16,7 @@
   .content {
     display: grid;
     gap: 16px;
+    max-width: var(--max-width);
   }
 }
 
