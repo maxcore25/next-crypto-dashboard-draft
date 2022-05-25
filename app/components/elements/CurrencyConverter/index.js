@@ -21,8 +21,8 @@ const CurrencyConverter = () => {
   const [result, setResult] = useState(0);
 
   const [exchangedData, setExchangedData] = useState({
-    primaryCurrency: 'BTC',
-    secondaryCurrency: 'USD',
+    chosenPrimaryCurrency: 'BTC',
+    chosenSecondaryCurrency: 'USD',
     exchangeRate: 0,
   });
 
@@ -53,8 +53,8 @@ const CurrencyConverter = () => {
             amount
         );
         setExchangedData({
-          primaryCurrency: chosenPrimaryCurrency,
-          secondaryCurrency: chosenSecondaryCurrency,
+          chosenPrimaryCurrency,
+          chosenSecondaryCurrency,
           exchangeRate:
             response.data['Realtime Currency Exchange Rate'][
               '5. Exchange Rate'
