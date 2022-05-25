@@ -1,5 +1,5 @@
 const Header = () => {
-  return <div>Enter</div>;
+  return <header className={styles.header}>Enter</header>;
 };
 
 export default Header;
