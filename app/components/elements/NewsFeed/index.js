@@ -7,6 +7,12 @@ const NewsFeed = () => {
   const [articles, setArticles] = useState();
 
   useEffect(() => {
+    axios
+      .get('/api/crypto')
+      .then(response => console.log('next api:', response.data));
+  });
+
+  useEffect(() => {
     const options = {
       method: 'GET',
       url: 'https://crypto-news-live3.p.rapidapi.com/news',
