@@ -8,7 +8,7 @@ const NewsFeed = () => {
 
   useEffect(() => {
     axios
-      .get('/api/crypto')
+      .get('/api/hello')
       .then(response => console.log('next api:', response.data));
   });
 
