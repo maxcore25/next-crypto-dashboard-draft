@@ -22,15 +22,15 @@ const NewsFeed = () => {
       },
     };
 
-    axios
-      .request(options)
-      .then(response => {
-        console.log(response.data);
-        setArticles(response.data.slice(0, 7));
-      })
-      .catch(error => {
-        console.error(error);
-      });
+    // axios
+    //   .request(options)
+    //   .then(response => {
+    //     console.log(response.data);
+    //     setArticles(response.data.slice(0, 7));
+    //   })
+    //   .catch(error => {
+    //     console.error(error);
+    //   });
   }, []);
 
   return (
