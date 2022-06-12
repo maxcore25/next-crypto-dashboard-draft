@@ -7,31 +7,11 @@ const NewsFeed = () => {
   const [articles, setArticles] = useState();
 
   useEffect(() => {
-    axios
-      .get('/api/crypto-news')
-      .then(response => console.log('next api:', response.data));
+    axios.get('/api/crypto-news').then(response => {
+      console.log('next api:', response.data);
+      setArticles(response.data.slice(0, 7));
+    });
   });
-
-  useEffect(() => {
-    const options = {
-      method: 'GET',
-      url: 'https://crypto-news-live3.p.rapidapi.com/news',
-      headers: {
-        'X-RapidAPI-Host': 'crypto-news-live3.p.rapidapi.com',
-        'X-RapidAPI-Key': process.env.NEXT_PUBLIC_RAPID_API_KEY,
-      },
-    };
-
-    // axios
-    //   .request(options)
-    //   .then(response => {
-    //     console.log(response.data);
-    //     setArticles(response.data.slice(0, 7));
-    //   })
-    //   .catch(error => {
-    //     console.error(error);
-    //   });
-  }, []);
 
   return (
     <Paper elevation={3} sx={{ borderRadius: '12px' }}>

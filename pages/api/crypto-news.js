@@ -14,12 +14,10 @@ export default function handler(req, res) {
     .request(options)
     .then(response => {
       // console.log(response.data);
-      // setArticles(response.data.slice(0, 7));
       res.status(200).json(response.data);
     })
     .catch(error => {
-      console.error(error);
+      // console.error(error);
+      res.status(404).json({ message: 'Something went wrong' });
     });
-
-  // res.status(200).json({ name: 'crypto-news' });
 }
