@@ -11,7 +11,7 @@ const NewsFeed = () => {
       console.log('next api:', response.data);
       setArticles(response.data.slice(0, 7));
     });
-  });
+  }, []);
 
   return (
     <Paper elevation={3} sx={{ borderRadius: '12px' }}>
