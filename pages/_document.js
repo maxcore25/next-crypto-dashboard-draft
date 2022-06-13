@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document';
+import { LOCAL_STORAGE_VARIABLES } from '../app/constants';
 
 export default function Document() {
   return (
@@ -26,7 +27,9 @@ const themeInitializerScript = `(function() {
 function setInitialColorMode() {
   // Check initial color preference
   function getInitialColorMode() {
-    const persistedPreferenceMode = window.localStorage.getItem('theme');
+    const persistedPreferenceMode = window.localStorage.getItem(
+      LOCAL_STORAGE_VARIABLES.CRYPTO_DASHBOARD_THEME
+    );
     const hasPersistedPreference = typeof persistedPreferenceMode === 'string';
 
     if (hasPersistedPreference) {

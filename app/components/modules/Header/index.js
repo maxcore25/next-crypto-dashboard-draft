@@ -3,6 +3,7 @@ import { IconButton } from '@mui/material';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { useState } from 'react';
+import { LOCAL_STORAGE_VARIABLES } from '../../../constants';
 
 const Header = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -13,11 +14,17 @@ const Header = () => {
     if (isDarkTheme) {
       // Set value of theme to dark
       document.documentElement.setAttribute('data-theme', 'dark');
-      window.localStorage.setItem('theme', 'dark');
+      window.localStorage.setItem(
+        LOCAL_STORAGE_VARIABLES.CRYPTO_DASHBOARD_THEME,
+        'dark'
+      );
     } else {
       // Set value of theme to light
       document.documentElement.removeAttribute('data-theme');
-      window.localStorage.setItem('theme', 'light');
+      window.localStorage.setItem(
+        LOCAL_STORAGE_VARIABLES.CRYPTO_DASHBOARD_THEME,
+        'light'
+      );
     }
   };
 
