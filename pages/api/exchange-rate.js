@@ -18,7 +18,6 @@ export default function handler(req, res) {
   axios
     .request(options)
     .then(response => {
-      console.log(response.data);
       res.status(200).json({
         exchangeRate:
           response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'],
