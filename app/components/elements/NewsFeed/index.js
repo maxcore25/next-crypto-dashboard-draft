@@ -8,7 +8,7 @@ const NewsFeed = () => {
 
   useEffect(() => {
     axios.get('/api/crypto-news').then(response => {
-      console.log('next api:', response.data);
+      console.log('NewsFeed api:', response.data);
       setArticles(response.data.slice(0, 7));
     });
   }, []);

@@ -44,7 +44,7 @@ const CurrencyConverter = () => {
     axios
       .request(options)
       .then(response => {
-        console.log(response.data);
+        console.log('NewsFeed api:', response.data);
         setExchangeRate(
           response.data['Realtime Currency Exchange Rate']['5. Exchange Rate']
         );
