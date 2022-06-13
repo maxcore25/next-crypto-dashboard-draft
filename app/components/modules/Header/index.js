@@ -9,6 +9,16 @@ const Header = () => {
 
   const handleSwitchTheme = () => {
     setIsDarkTheme(!isDarkTheme);
+
+    if (isDarkTheme) {
+      // Set value of theme to dark
+      document.documentElement.setAttribute('data-theme', 'dark');
+      window.localStorage.setItem('theme', 'dark');
+    } else {
+      // Set value of theme to light
+      document.documentElement.removeAttribute('data-theme');
+      window.localStorage.setItem('theme', 'light');
+    }
   };
 
   return (
