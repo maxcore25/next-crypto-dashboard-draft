@@ -21,6 +21,11 @@
   scroll-behavior: smooth;
 }
 
+[data-theme='dark'] {
+  --text-clr: #bebebe;
+  --bg-lvl-1-clr: #1f1b1b;
+}
+
 /* ===== Body Styles ===== */
 body {
   color: var(--text-clr);
