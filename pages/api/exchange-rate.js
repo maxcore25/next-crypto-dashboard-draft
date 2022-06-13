@@ -15,27 +15,16 @@ export default function handler(req, res) {
     },
   };
 
-  // axios
-  //   .request(options)
-  //   .then(response => {
-  //     console.log(response.data);
-  //     setExchangeRate(
-  //       response.data['Realtime Currency Exchange Rate']['5. Exchange Rate']
-  //     );
-  //     setResult(
-  //       response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'] *
-  //         amount
-  //     );
-  //     setExchangedData({
-  //       chosenPrimaryCurrency,
-  //       chosenSecondaryCurrency,
-  //       exchangeRate:
-  //         response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'],
-  //     });
-  //   })
-  //   .catch(error => {
-  //     console.error(error);
-  //   });
-
-  res.status(200).json({ message: 'CurrencyConverter' });
+  axios
+    .request(options)
+    .then(response => {
+      console.log(response.data);
+      res.status(200).json({
+        exchangeRate:
+          response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'],
+      });
+    })
+    .catch(error => {
+      res.status(500).json({ message: 'Internal Server Error' });
+    });
 }
