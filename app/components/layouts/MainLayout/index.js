@@ -3,10 +3,11 @@ import CustomHead from '../../elements/CustomHead';
 import NewsFeed from '../../elements/NewsFeed';
 import CurrencyConverter from '../../elements/CurrencyConverter';
 import Header from '../../modules/Header';
+import MainLayoutContextProvider from '../../../context/MainLayoutContextProvider';
 
 const MainLayout = () => {
   return (
-    <>
+    <MainLayoutContextProvider>
       <CustomHead />
       <Header />
       <section className={styles.section}>
@@ -16,7 +17,7 @@ const MainLayout = () => {
           <NewsFeed />
         </main>
       </section>
-    </>
+    </MainLayoutContextProvider>
   );
 };
 
