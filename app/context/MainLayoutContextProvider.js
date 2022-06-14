@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { MainLayoutContext } from '.';
-import { LOCAL_STORAGE_VARIABLES } from '../constants';
 
 const MainLayoutContextProvider = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);

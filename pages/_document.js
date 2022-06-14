@@ -25,7 +25,7 @@ const themeInitializerScript = `(function() {
 `;
 
 function setInitialTheme() {
-  // Check initial color preference
+  // Check initial color theme
   function getInitialTheme() {
     const persistedPreferenceMode = window.localStorage.getItem(
       'crypto-dashboard-theme'
@@ -36,7 +36,7 @@ function setInitialTheme() {
       return persistedPreferenceMode;
     }
 
-    // Check the current preference
+    // Check current preference
     const preference = window.matchMedia('(prefers-color-scheme: dark)');
     console.log('preference', preference);
     return preference.matches ? 'dark' : 'light';
