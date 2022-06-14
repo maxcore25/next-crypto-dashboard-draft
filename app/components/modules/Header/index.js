@@ -12,9 +12,9 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.contentContainer}>
-        <span>Lorem</span>
-        <span>Lorem</span>
-        <span>Lorem</span>
+        <a href='https://github.com/maxcore25/next-crypto-dashboard-draft'>
+          GitHub
+        </a>
         <IconButton
           onClick={() => handleSwitchTheme()}
           color='primary'
