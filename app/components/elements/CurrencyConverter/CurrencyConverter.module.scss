@@ -1,11 +1,16 @@
+.muiPaper {
+  background: var(--bg-lvl-2-clr);
+}
+
 .mainGrid {
   display: grid;
   grid-template-rows: auto 1fr auto;
   gap: 16px;
   padding: 16px;
 
-  h2 {
+  .title {
     text-align: center;
+    color: var(--title-clr);
   }
 
   .inputsGrid {

@@ -44,9 +44,12 @@ const CurrencyConverter = () => {
   };
 
   return (
-    <Paper elevation={3} sx={{ borderRadius: '12px' }}>
+    <Paper
+      className={styles.muiPaper}
+      elevation={3}
+      sx={{ borderRadius: '12px' }}>
       <div className={styles.mainGrid}>
-        <h2>Currency Converter</h2>
+        <h2 className={styles.title}>Currency Converter</h2>
         <Paper elevation={3} sx={{ borderRadius: '12px', p: '16px' }}>
           <div className={styles.inputsGrid}>
             <div className={styles.inputContainer}>
