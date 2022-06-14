@@ -57,7 +57,7 @@ const CurrencyConverter = () => {
           <div className={styles.inputsGrid}>
             <div className={styles.inputContainer}>
               <TextField
-                className={styles.input}
+                className={styles.muiInput}
                 value={amount}
                 onChange={e => setAmount(e.target.value)}
                 id='outlined-basic'
@@ -70,6 +70,7 @@ const CurrencyConverter = () => {
               <Box sx={{ width: 85 }}>
                 <FormControl fullWidth>
                   <Select
+                    className={styles.muiSelect}
                     value={chosenPrimaryCurrency}
                     onChange={e => setChosenPrimaryCurrency(e.target.value)}
                     inputProps={{
@@ -98,6 +99,7 @@ const CurrencyConverter = () => {
               <Box sx={{ width: 85 }}>
                 <FormControl fullWidth>
                   <Select
+                    className={styles.muiSelect}
                     value={chosenSecondaryCurrency}
                     onChange={e => setChosenSecondaryCurrency(e.target.value)}
                     inputProps={{
