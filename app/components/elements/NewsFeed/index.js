@@ -6,12 +6,12 @@ import axios from 'axios';
 const NewsFeed = () => {
   const [articles, setArticles] = useState();
 
-  // useEffect(() => {
-  //   axios.get('/api/crypto-news').then(response => {
-  //     console.log('NewsFeed api:', response.data);
-  //     setArticles(response.data.slice(0, 7));
-  //   });
-  // }, []);
+  useEffect(() => {
+    axios.get('/api/crypto-news').then(response => {
+      console.log('NewsFeed api:', response.data);
+      setArticles(response.data.slice(0, 7));
+    });
+  }, []);
 
   return (
     <Paper
@@ -27,7 +27,7 @@ const NewsFeed = () => {
                 elevation={3}
                 sx={{ borderRadius: '12px' }}
                 className={styles.newsCard}>
-                <h4>{article.title}</h4>
+                <h4 className={styles.cardTitle}>{article.title}</h4>
               </Paper>
             </a>
           ))}

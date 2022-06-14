@@ -28,5 +28,10 @@
 
   .newsCard {
     padding: 12px;
+    background: var(--bg-lvl-3-clr);
+
+    .cardTitle {
+      color: var(--accent-clr);
+    }
   }
 }
