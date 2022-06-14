@@ -43,7 +43,7 @@ const MainLayout = () => {
       <CustomHead />
       <Header />
       <section className={styles.section}>
-        <h1>Crypto Dashboard</h1>
+        <h1 className={styles.title}>Crypto Dashboard</h1>
         <main className={styles.content}>
           <CurrencyConverter />
           <NewsFeed />

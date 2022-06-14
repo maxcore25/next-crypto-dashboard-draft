@@ -8,9 +8,10 @@
   margin: 0 auto;
   min-height: 100vh;
 
-  h1 {
+  .title {
     text-align: center;
     font-size: 2rem;
+    color: var(--title-clr);
   }
 
   .content {
