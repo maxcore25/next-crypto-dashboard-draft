@@ -21,7 +21,7 @@
   scroll-behavior: smooth;
 }
 
-[data-theme='dark'] {
+:root[data-theme='dark'] {
   --text-clr: #bebebe;
   --bg-lvl-1-clr: #1f1b1b;
 }

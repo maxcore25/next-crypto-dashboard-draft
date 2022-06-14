@@ -42,6 +42,8 @@ function setInitialColorMode() {
     return preference.matches ? 'dark' : 'light';
   }
 
-  if (getInitialColorMode() === 'dark')
-    document.documentElement.setAttribute('data-theme', 'dark');
+  // if (getInitialColorMode() === 'dark')
+  //   document.documentElement.setAttribute('data-theme', 'dark');
+
+  document.documentElement.setAttribute('data-theme', getInitialColorMode());
 }

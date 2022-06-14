@@ -10,6 +10,7 @@ const Header = () => {
 
   const handleSwitchTheme = () => {
     setIsDarkTheme(!isDarkTheme);
+    console.log('isDarkTheme', isDarkTheme);
 
     if (isDarkTheme) {
       // Set value of theme to dark
@@ -20,7 +21,7 @@ const Header = () => {
       );
     } else {
       // Set value of theme to light
-      document.documentElement.removeAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', 'light');
       window.localStorage.setItem(
         LOCAL_STORAGE_VARIABLES.CRYPTO_DASHBOARD_THEME,
         'light'
@@ -39,7 +40,7 @@ const Header = () => {
           color='primary'
           aria-label='Switch Theme'
           component='span'>
-          {isDarkTheme ? <DarkModeIcon /> : <LightModeIcon />}
+          {isDarkTheme ? <LightModeIcon /> : <DarkModeIcon />}
         </IconButton>
       </div>
     </header>
