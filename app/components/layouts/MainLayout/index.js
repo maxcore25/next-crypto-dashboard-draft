@@ -14,14 +14,12 @@ const MainLayout = () => {
     console.log('useEffect isDarkTheme:', isDarkTheme);
     if (isDarkTheme !== undefined) {
       if (isDarkTheme) {
-        // Set value of  darkmode to dark
         document.documentElement.setAttribute('data-theme', 'dark');
         window.localStorage.setItem(
           LOCAL_STORAGE_VARIABLES.CRYPTO_DASHBOARD_THEME,
           'dark'
         );
       } else {
-        // Set value of  darkmode to light
         document.documentElement.removeAttribute('data-theme');
         window.localStorage.setItem(
           LOCAL_STORAGE_VARIABLES.CRYPTO_DASHBOARD_THEME,
