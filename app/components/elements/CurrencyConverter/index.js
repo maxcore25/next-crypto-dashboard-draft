@@ -50,10 +50,14 @@ const CurrencyConverter = () => {
       sx={{ borderRadius: '12px' }}>
       <div className={styles.mainGrid}>
         <h2 className={styles.title}>Currency Converter</h2>
-        <Paper elevation={3} sx={{ borderRadius: '12px', p: '16px' }}>
+        <Paper
+          className={styles.muiPaper}
+          elevation={3}
+          sx={{ borderRadius: '12px', p: '16px' }}>
           <div className={styles.inputsGrid}>
             <div className={styles.inputContainer}>
               <TextField
+                className={styles.input}
                 value={amount}
                 onChange={e => setAmount(e.target.value)}
                 id='outlined-basic'

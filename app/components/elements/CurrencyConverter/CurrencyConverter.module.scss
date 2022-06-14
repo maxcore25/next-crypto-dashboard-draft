@@ -24,3 +24,21 @@
     }
   }
 }
+
+.input {
+  input {
+    color: var(--text-clr);
+  }
+
+  label {
+    color: var(--text-clr);
+  }
+
+  fieldset {
+    border-color: var(--text-clr);
+  }
+
+  &:hover fieldset {
+    border-color: var(--accent-clr) !important;
+  }
+}
