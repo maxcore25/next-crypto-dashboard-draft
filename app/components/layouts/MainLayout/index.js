@@ -38,30 +38,6 @@ const MainLayout = () => {
     setIsDarkTheme(initialColorValue === 'dark');
   }, []);
 
-  // useEffect(() => {
-  //   const storage = localStorage.getItem(
-  //     LOCAL_STORAGE_VARIABLES.CRYPTO_DASHBOARD_THEME
-  //   );
-
-  //   console.log('localStorage:', storage);
-  // }, []);
-
-  // useEffect(() => {
-  //   if (isDarkTheme) {
-  //     document.documentElement.setAttribute('data-theme', 'dark');
-  //     window.localStorage.setItem(
-  //       LOCAL_STORAGE_VARIABLES.CRYPTO_DASHBOARD_THEME,
-  //       'dark'
-  //     );
-  //   } else {
-  //     document.documentElement.setAttribute('data-theme', 'light');
-  //     window.localStorage.setItem(
-  //       LOCAL_STORAGE_VARIABLES.CRYPTO_DASHBOARD_THEME,
-  //       'light'
-  //     );
-  //   }
-  // }, [isDarkTheme]);
-
   return (
     <>
       <CustomHead />
