@@ -10,17 +10,14 @@ const Header = () => {
 
   const handleSwitchTheme = () => {
     setIsDarkTheme(!isDarkTheme);
-    console.log('isDarkTheme', isDarkTheme);
 
     if (isDarkTheme) {
-      // Set value of theme to dark
       document.documentElement.setAttribute('data-theme', 'dark');
       window.localStorage.setItem(
         LOCAL_STORAGE_VARIABLES.CRYPTO_DASHBOARD_THEME,
         'dark'
       );
     } else {
-      // Set value of theme to light
       document.documentElement.setAttribute('data-theme', 'light');
       window.localStorage.setItem(
         LOCAL_STORAGE_VARIABLES.CRYPTO_DASHBOARD_THEME,
