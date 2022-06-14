@@ -2,29 +2,12 @@ import styles from './Header.module.scss';
 import { IconButton } from '@mui/material';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { LOCAL_STORAGE_VARIABLES } from '../../../constants';
+import { MainLayoutContext } from '../../../context';
 
 const Header = () => {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
-
-  const handleSwitchTheme = () => {
-    setIsDarkTheme(!isDarkTheme);
-
-    if (isDarkTheme) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      window.localStorage.setItem(
-        LOCAL_STORAGE_VARIABLES.CRYPTO_DASHBOARD_THEME,
-        'dark'
-      );
-    } else {
-      document.documentElement.setAttribute('data-theme', 'light');
-      window.localStorage.setItem(
-        LOCAL_STORAGE_VARIABLES.CRYPTO_DASHBOARD_THEME,
-        'light'
-      );
-    }
-  };
+  const { isDarkTheme, handleSwitchTheme } = useContext(MainLayoutContext);
 
   return (
     <header className={styles.header}>
