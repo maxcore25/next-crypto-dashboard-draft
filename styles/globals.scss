@@ -14,16 +14,20 @@
   --max-width: 1000px;
   --border-radius-1: 12px;
   --accent-clr: #2f8af5;
+  --title-clr: #000;
   --text-clr: #000;
   --bg-lvl-1-clr: #fff;
+  --bg-lvl-2-clr: #fff;
   // --bg-lvl-1-clr: #16161c;
   --primary-font: 'Roboto', sans-serif;
   scroll-behavior: smooth;
 }
 
 :root[data-theme='dark'] {
+  --title-clr: #ffffff;
   --text-clr: #bebebe;
   --bg-lvl-1-clr: #1f1b1b;
+  --bg-lvl-2-clr: #2e2828;
 }
 
 /* ===== Body Styles ===== */

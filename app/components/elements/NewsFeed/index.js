@@ -14,9 +14,12 @@ const NewsFeed = () => {
   // }, []);
 
   return (
-    <Paper elevation={3} sx={{ borderRadius: '12px' }}>
+    <Paper
+      className={styles.muiPaper}
+      elevation={3}
+      sx={{ borderRadius: '12px' }}>
       <div className={styles.mainGrid}>
-        <h2>News Feed</h2>
+        <h2 className={styles.title}>News Feed</h2>
         <div className={styles.newsGrid}>
           {articles?.map((article, index) => (
             <a key={index} href={article.url} className={styles.newsCardLink}>
