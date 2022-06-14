@@ -6,7 +6,6 @@ export function useLocalStorage(key, initialValue) {
       const storage = localStorage.getItem(key);
 
       // if (storage) return JSON.parse(storage);
-      console.log(storage);
       if (storage) return storage;
     }
 

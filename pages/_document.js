@@ -42,5 +42,9 @@ function setInitialTheme() {
     return preference.matches ? 'dark' : 'light';
   }
 
+  const currentColorMode = getInitialTheme();
+  const element = document.documentElement;
+  element.style.setProperty('--initial-color-mode', currentColorMode);
+
   document.documentElement.setAttribute('data-theme', getInitialTheme());
 }
