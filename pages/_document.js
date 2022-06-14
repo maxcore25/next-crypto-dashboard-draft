@@ -28,23 +28,19 @@ function setInitialColorMode() {
   // Check initial color preference
   function getInitialColorMode() {
     const persistedPreferenceMode = window.localStorage.getItem(
-      LOCAL_STORAGE_VARIABLES.CRYPTO_DASHBOARD_THEME
+      'crypto-dashboard-theme'
     );
-    const hasPersistedPreference = typeof persistedPreferenceMode === 'string';
 
-    if (hasPersistedPreference) {
+    if (persistedPreferenceMode) {
+      console.log('persistedPreferenceMode: ', persistedPreferenceMode);
       return persistedPreferenceMode;
     }
 
     // Check the current preference
     const preference = window.matchMedia('(prefers-color-scheme: dark)');
-    const hasMediaQueryPreference = typeof preference.matches === 'boolean';
 
-    if (hasMediaQueryPreference) {
-      return preference.matches ? 'dark' : 'light';
-    }
-
-    return 'light';
+    console.log('preference', preference);
+    return preference.matches ? 'dark' : 'light';
   }
 
   const currentColorMode = getInitialColorMode();
