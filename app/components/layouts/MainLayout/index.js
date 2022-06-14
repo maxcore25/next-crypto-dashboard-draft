@@ -11,7 +11,6 @@ const MainLayout = () => {
   const { isDarkTheme, setIsDarkTheme } = useContext(MainLayoutContext);
 
   useEffect(() => {
-    console.log('useEffect isDarkTheme:', isDarkTheme);
     if (isDarkTheme !== undefined) {
       if (isDarkTheme) {
         document.documentElement.setAttribute('data-theme', 'dark');
