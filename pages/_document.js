@@ -19,14 +19,14 @@ export default function Document() {
 
 // This function needs to be a String
 const themeInitializerScript = `(function() {
-	${setInitialColorMode.toString()}
-	setInitialColorMode();
+	${setInitialTheme.toString()}
+	setInitialTheme();
 })()
 `;
 
-function setInitialColorMode() {
+function setInitialTheme() {
   // Check initial color preference
-  function getInitialColorMode() {
+  function getInitialTheme() {
     const persistedPreferenceMode = window.localStorage.getItem(
       'crypto-dashboard-theme'
     );
@@ -42,8 +42,5 @@ function setInitialColorMode() {
     return preference.matches ? 'dark' : 'light';
   }
 
-  // if (getInitialColorMode() === 'dark')
-  //   document.documentElement.setAttribute('data-theme', 'dark');
-
-  document.documentElement.setAttribute('data-theme', getInitialColorMode());
+  document.documentElement.setAttribute('data-theme', getInitialTheme());
 }

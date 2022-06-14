@@ -3,11 +3,33 @@ import CustomHead from '../../elements/CustomHead';
 import NewsFeed from '../../elements/NewsFeed';
 import CurrencyConverter from '../../elements/CurrencyConverter';
 import Header from '../../modules/Header';
-import MainLayoutContextProvider from '../../../context/MainLayoutContextProvider';
+import { MainLayoutContext } from '../../../context';
+import { useContext, useEffect } from 'react';
+import { LOCAL_STORAGE_VARIABLES } from '../../../constants';
 
 const MainLayout = () => {
+  const { isDarkTheme, handleSwitchTheme } = useContext(MainLayoutContext);
+
+  // useEffect(() => {}, []);
+
+  useEffect(() => {
+    if (isDarkTheme) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      window.localStorage.setItem(
+        LOCAL_STORAGE_VARIABLES.CRYPTO_DASHBOARD_THEME,
+        'dark'
+      );
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      window.localStorage.setItem(
+        LOCAL_STORAGE_VARIABLES.CRYPTO_DASHBOARD_THEME,
+        'light'
+      );
+    }
+  }, [isDarkTheme]);
+
   return (
-    <MainLayoutContextProvider>
+    <>
       <CustomHead />
       <Header />
       <section className={styles.section}>
@@ -17,7 +39,7 @@ const MainLayout = () => {
           <NewsFeed />
         </main>
       </section>
-    </MainLayoutContextProvider>
+    </>
   );
 };
 
