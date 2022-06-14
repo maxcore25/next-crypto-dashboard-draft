@@ -38,16 +38,10 @@ function setInitialColorMode() {
 
     // Check the current preference
     const preference = window.matchMedia('(prefers-color-scheme: dark)');
-
     console.log('preference', preference);
     return preference.matches ? 'dark' : 'light';
   }
 
-  const currentColorMode = getInitialColorMode();
-  const element = document.documentElement;
-  element.style.setProperty('--initial-color-mode', currentColorMode);
-
-  // If dark mode apply dark mode
-  if (currentColorMode === 'dark')
+  if (getInitialColorMode() === 'dark')
     document.documentElement.setAttribute('data-theme', 'dark');
 }
