@@ -45,7 +45,7 @@ const CurrencyConverter = () => {
 
   return (
     <Paper
-      className={styles.muiPaperInputBlock}
+      className={styles.muiPaper}
       elevation={3}
       sx={{ borderRadius: '12px', p: '16px' }}>
       <div className={styles.inputsGrid}>
