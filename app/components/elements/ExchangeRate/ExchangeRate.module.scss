@@ -1,4 +1,6 @@
 .muiPaper {
+  display: grid;
+  place-content: center;
   background: var(--bg-lvl-3-clr);
 }
 
