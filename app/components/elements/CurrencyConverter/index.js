@@ -51,7 +51,7 @@ const CurrencyConverter = () => {
       <div className={styles.mainGrid}>
         <h2 className={styles.title}>Currency Converter</h2>
         <Paper
-          className={styles.muiPaper}
+          className={styles.muiPaperInputBlock}
           elevation={3}
           sx={{ borderRadius: '12px', p: '16px' }}>
           <div className={styles.inputsGrid}>

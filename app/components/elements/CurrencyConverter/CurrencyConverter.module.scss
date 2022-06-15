@@ -2,6 +2,10 @@
   background: var(--bg-lvl-2-clr);
 }
 
+.muiPaperInputBlock {
+  background: var(--bg-lvl-3-clr);
+}
+
 .mainGrid {
   display: grid;
   grid-template-rows: auto 1fr auto;
