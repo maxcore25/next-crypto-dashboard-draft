@@ -10,7 +10,6 @@ import {
 import { Box } from '@mui/system';
 import { useContext, useState } from 'react';
 import { CURRENCIES } from '../../../constants';
-import axios from 'axios';
 import { MainLayoutContext } from '../../../context';
 
 const CurrencyConverter = () => {

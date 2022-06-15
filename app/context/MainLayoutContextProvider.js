@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react';
 import { MainLayoutContext } from '.';
 import { LOCAL_STORAGE_VARIABLES } from '../constants';
+import axios from 'axios';
 
 const MainLayoutContextProvider = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(undefined);
-
   const [chosenPrimaryCurrency, setChosenPrimaryCurrency] = useState('BTC');
   const [chosenSecondaryCurrency, setChosenSecondaryCurrency] = useState('USD');
   const [amount, setAmount] = useState(1);
   const [exchangeRate, setExchangeRate] = useState(0);
   const [result, setResult] = useState(0);
-
   const [exchangedData, setExchangedData] = useState({
     chosenPrimaryCurrency: 'BTC',
     chosenSecondaryCurrency: 'USD',
