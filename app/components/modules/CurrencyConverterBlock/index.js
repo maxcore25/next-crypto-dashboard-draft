@@ -1,4 +1,4 @@
-import styles from './CurrencyConverter.module.scss';
+import styles from './CurrencyConverterBlock.module.scss';
 import {
   Button,
   FormControl,
@@ -9,9 +9,9 @@ import {
 } from '@mui/material';
 import { Box } from '@mui/system';
 import { useState } from 'react';
-import ExchangeRate from '../ExchangeRate';
 import { CURRENCIES } from '../../../constants';
 import axios from 'axios';
+import ExchangeRate from '../../elements/ExchangeRate';
 
 const CurrencyConverterBlock = () => {
   const [chosenPrimaryCurrency, setChosenPrimaryCurrency] = useState('BTC');
