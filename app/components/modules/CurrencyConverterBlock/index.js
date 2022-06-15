@@ -13,7 +13,7 @@ import ExchangeRate from '../ExchangeRate';
 import { CURRENCIES } from '../../../constants';
 import axios from 'axios';
 
-const CurrencyConverter = () => {
+const CurrencyConverterBlock = () => {
   const [chosenPrimaryCurrency, setChosenPrimaryCurrency] = useState('BTC');
   const [chosenSecondaryCurrency, setChosenSecondaryCurrency] = useState('USD');
   const [amount, setAmount] = useState(1);
@@ -126,4 +126,4 @@ const CurrencyConverter = () => {
   );
 };
 
-export default CurrencyConverter;
+export default CurrencyConverterBlock;
