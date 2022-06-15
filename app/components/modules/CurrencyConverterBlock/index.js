@@ -5,12 +5,6 @@ import ExchangeRate from '../../elements/ExchangeRate';
 import CurrencyConverter from '../../elements/CurrencyConverter';
 
 const CurrencyConverterBlock = () => {
-  const [exchangedData, setExchangedData] = useState({
-    chosenPrimaryCurrency: 'BTC',
-    chosenSecondaryCurrency: 'USD',
-    exchangeRate: 0,
-  });
-
   return (
     <Paper
       className={styles.muiPaper}
@@ -19,7 +13,7 @@ const CurrencyConverterBlock = () => {
       <div className={styles.mainGrid}>
         <h2 className={styles.title}>Currency Converter</h2>
         <CurrencyConverter />
-        <ExchangeRate exchangedData={exchangedData} />
+        <ExchangeRate />
       </div>
     </Paper>
   );

@@ -1,7 +1,11 @@
 import styles from './ExchangeRate.module.scss';
 import { Paper } from '@mui/material';
+import { useContext } from 'react';
+import { MainLayoutContext } from '../../../context';
 
-const ExchangeRate = ({ exchangedData }) => {
+const ExchangeRate = () => {
+  const { exchangedData } = useContext(MainLayoutContext);
+
   return (
     <Paper
       className={styles.muiPaper}
