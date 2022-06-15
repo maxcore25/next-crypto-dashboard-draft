@@ -44,6 +44,25 @@
   }
 }
 
+.muiInputDisabled {
+  input {
+    color: var(--text-clr) !important;
+    -webkit-text-fill-color: initial !important;
+  }
+
+  label {
+    color: var(--text-clr) !important;
+  }
+
+  fieldset {
+    border-color: var(--text-clr) !important;
+  }
+
+  &:hover fieldset {
+    border-color: var(--accent-clr) !important;
+  }
+}
+
 .muiSelect {
   div {
     color: var(--text-clr) !important;
