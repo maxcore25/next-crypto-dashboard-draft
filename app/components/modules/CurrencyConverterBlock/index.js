@@ -1,15 +1,6 @@
 import styles from './CurrencyConverterBlock.module.scss';
-import {
-  Button,
-  FormControl,
-  MenuItem,
-  Paper,
-  Select,
-  TextField,
-} from '@mui/material';
-import { Box } from '@mui/system';
+import { Paper } from '@mui/material';
 import { useState } from 'react';
-import { CURRENCIES } from '../../../constants';
 import axios from 'axios';
 import ExchangeRate from '../../elements/ExchangeRate';
 import CurrencyConverter from '../../elements/CurrencyConverter';
@@ -26,23 +17,6 @@ const CurrencyConverterBlock = () => {
     chosenSecondaryCurrency: 'USD',
     exchangeRate: 0,
   });
-
-  const convert = () => {
-    axios
-      .post('/api/exchange-rate', {
-        from_currency: chosenPrimaryCurrency,
-        to_currency: chosenSecondaryCurrency,
-      })
-      .then(response => {
-        setExchangeRate(response.data.exchangeRate);
-        setResult(response.data.exchangeRate * amount);
-        setExchangedData({
-          chosenPrimaryCurrency,
-          chosenSecondaryCurrency,
-          exchangeRate: response.data.exchangeRate,
-        });
-      });
-  };
 
   return (
     <Paper

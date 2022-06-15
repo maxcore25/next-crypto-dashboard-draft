@@ -9,7 +9,6 @@ import {
 } from '@mui/material';
 import { Box } from '@mui/system';
 import { useState } from 'react';
-import ExchangeRate from '../ExchangeRate';
 import { CURRENCIES } from '../../../constants';
 import axios from 'axios';
 
