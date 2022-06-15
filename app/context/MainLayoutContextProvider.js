@@ -44,6 +44,14 @@ const MainLayoutContextProvider = ({ children }) => {
         isDarkTheme,
         setIsDarkTheme,
         handleSwitchTheme,
+        amount,
+        setAmount,
+        chosenPrimaryCurrency,
+        setChosenPrimaryCurrency,
+        result,
+        chosenSecondaryCurrency,
+        setChosenSecondaryCurrency,
+        convert,
       }}>
       {children}
     </MainLayoutContext.Provider>
