@@ -6,12 +6,12 @@ import axios from 'axios';
 const NewsFeed = () => {
   const [articles, setArticles] = useState();
 
-  // useEffect(() => {
-  //   axios.get('/api/crypto-news').then(response => {
-  //     console.log('NewsFeed api:', response.data);
-  //     setArticles(response.data.slice(0, 7));
-  //   });
-  // }, []);
+  useEffect(() => {
+    axios.get('/api/crypto-news').then(response => {
+      console.log('NewsFeed api:', response.data);
+      setArticles(response.data.slice(0, 7));
+    });
+  }, []);
 
   return (
     <Paper
