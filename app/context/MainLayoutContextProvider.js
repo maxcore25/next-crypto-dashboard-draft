@@ -51,6 +51,7 @@ const MainLayoutContextProvider = ({ children }) => {
         chosenSecondaryCurrency,
         setChosenSecondaryCurrency,
         convert,
+        exchangedData,
       }}>
       {children}
     </MainLayoutContext.Provider>
