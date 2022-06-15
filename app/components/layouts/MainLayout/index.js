@@ -1,7 +1,6 @@
 import styles from './MainLayout.module.scss';
 import CustomHead from '../../elements/CustomHead';
 import NewsFeed from '../../elements/NewsFeed';
-import CurrencyConverter from '../../elements/CurrencyConverter';
 import Header from '../../modules/Header';
 import { MainLayoutContext } from '../../../context';
 import { useContext, useEffect } from 'react';

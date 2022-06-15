@@ -2,8 +2,7 @@ import styles from './Header.module.scss';
 import { IconButton } from '@mui/material';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-import { useContext, useState } from 'react';
-import { LOCAL_STORAGE_VARIABLES } from '../../../constants';
+import { useContext } from 'react';
 import { MainLayoutContext } from '../../../context';
 
 const Header = () => {

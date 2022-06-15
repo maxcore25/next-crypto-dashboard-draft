@@ -1,6 +1,5 @@
 import styles from './CurrencyConverterBlock.module.scss';
 import { Paper } from '@mui/material';
-import { useState } from 'react';
 import ExchangeRate from '../../elements/ExchangeRate';
 import CurrencyConverter from '../../elements/CurrencyConverter';
 

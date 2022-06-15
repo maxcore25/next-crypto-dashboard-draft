@@ -8,7 +8,7 @@ import {
   TextField,
 } from '@mui/material';
 import { Box } from '@mui/system';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { CURRENCIES } from '../../../constants';
 import { MainLayoutContext } from '../../../context';
 

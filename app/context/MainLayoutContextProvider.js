@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { MainLayoutContext } from '.';
-import { LOCAL_STORAGE_VARIABLES } from '../constants';
 import axios from 'axios';
 
 const MainLayoutContextProvider = ({ children }) => {
