@@ -8,11 +8,23 @@ import {
   TextField,
 } from '@mui/material';
 import { Box } from '@mui/system';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { CURRENCIES } from '../../../constants';
 import axios from 'axios';
+import { MainLayoutContext } from '../../../context';
 
 const CurrencyConverter = () => {
+  const {
+    amount,
+    setAmount,
+    chosenPrimaryCurrency,
+    setChosenPrimaryCurrency,
+    result,
+    chosenSecondaryCurrency,
+    setChosenSecondaryCurrency,
+    convert,
+  } = useContext(MainLayoutContext);
+
   return (
     <Paper
       className={styles.muiPaper}
