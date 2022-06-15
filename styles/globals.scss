@@ -16,9 +16,11 @@
   --accent-clr: #2f8af5;
   --title-clr: #000;
   --text-clr: #000;
+  --text-disabled-clr: #00000065;
   --bg-lvl-1-clr: #fff;
   --bg-lvl-2-clr: #fff;
   --bg-lvl-3-clr: #fff;
+  --bg-link-clr: #fff;
   --primary-font: 'Roboto', sans-serif;
   scroll-behavior: smooth;
 }
@@ -26,9 +28,11 @@
 :root[data-theme='dark'] {
   --title-clr: #ffffff;
   --text-clr: #bebebe;
+  --text-disabled-clr: #bebebe8a;
   --bg-lvl-1-clr: #1f1b1b;
   --bg-lvl-2-clr: #2e2828;
-  --bg-lvl-3-clr: #30303a;
+  --bg-lvl-3-clr: #3c3535;
+  --bg-link-clr: #30303a;
 }
 
 /* ===== Body Styles ===== */

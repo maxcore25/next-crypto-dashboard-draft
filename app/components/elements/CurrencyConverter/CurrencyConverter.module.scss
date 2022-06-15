@@ -46,20 +46,16 @@
 
 .muiInputDisabled {
   input {
-    color: var(--text-clr) !important;
+    color: var(--text-disabled-clr) !important;
     -webkit-text-fill-color: initial !important;
   }
 
   label {
-    color: var(--text-clr) !important;
+    color: var(--text-disabled-clr) !important;
   }
 
   fieldset {
-    border-color: var(--text-clr) !important;
-  }
-
-  &:hover fieldset {
-    border-color: var(--accent-clr) !important;
+    border-color: var(--text-disabled-clr) !important;
   }
 }
 
