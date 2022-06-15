@@ -87,6 +87,7 @@ const CurrencyConverter = () => {
             </div>
             <div className={styles.inputContainer}>
               <TextField
+                className={styles.muiInput}
                 disabled
                 value={result}
                 id='outlined-basic'

@@ -27,15 +27,16 @@
 
 .muiInput {
   input {
-    color: var(--text-clr);
+    color: var(--text-clr) !important;
+    -webkit-text-fill-color: initial !important;
   }
 
   label {
-    color: var(--text-clr);
+    color: var(--text-clr) !important;
   }
 
   fieldset {
-    border-color: var(--text-clr);
+    border-color: var(--text-clr) !important;
   }
 
   &:hover fieldset {
