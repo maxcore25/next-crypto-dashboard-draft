@@ -2,10 +2,6 @@
   background: var(--bg-lvl-2-clr);
 }
 
-.muiPaperInputBlock {
-  background: var(--bg-lvl-3-clr);
-}
-
 .mainGrid {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -15,68 +11,5 @@
   .title {
     text-align: center;
     color: var(--title-clr);
-  }
-
-  .inputsGrid {
-    display: grid;
-    gap: 24px;
-
-    .inputContainer {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 12px;
-    }
-  }
-}
-
-.muiInput {
-  input {
-    color: var(--text-clr) !important;
-    -webkit-text-fill-color: initial !important;
-  }
-
-  label {
-    color: var(--text-clr) !important;
-  }
-
-  fieldset {
-    border-color: var(--text-clr) !important;
-  }
-
-  &:hover fieldset {
-    border-color: var(--accent-clr) !important;
-  }
-}
-
-.muiInputDisabled {
-  input {
-    color: var(--text-disabled-clr) !important;
-    -webkit-text-fill-color: initial !important;
-  }
-
-  label {
-    color: var(--text-disabled-clr) !important;
-  }
-
-  fieldset {
-    border-color: var(--text-disabled-clr) !important;
-  }
-}
-
-.muiSelect {
-  div {
-    color: var(--text-clr) !important;
-  }
-
-  svg {
-    color: var(--text-clr);
-  }
-
-  fieldset {
-    border-color: var(--text-clr);
-  }
-
-  &:hover fieldset {
-    border-color: var(--accent-clr) !important;
   }
 }
