@@ -23,6 +23,8 @@
   --bg-lvl-3-clr: #fff;
   --bg-link-clr: #fff;
   --primary-font: 'Roboto', sans-serif;
+  --duration: 10.3s;
+  --theme-animation: background-color var(--duration), color var(--duration);
   scroll-behavior: smooth;
 }
 
@@ -45,6 +47,7 @@ body {
   font-family: var(--primary-font);
   -webkit-font-smoothing: antialiased;
   font-size: clamp(13px, 10px + 1vmin, 15px);
+  transition: var(--theme-animation);
 }
 
 /* ===== Selection ===== */
@@ -69,9 +72,11 @@ a {
   text-decoration: none;
   color: currentColor;
 }
+
 ul {
   list-style: none;
 }
+
 button {
   font-family: var(--primary-font);
   background: none;
@@ -79,6 +84,7 @@ button {
   border: none;
   cursor: pointer;
 }
+
 input {
   color: var(--text-clr);
   outline: none;
