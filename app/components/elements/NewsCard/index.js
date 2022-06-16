@@ -1,7 +1,7 @@
 import styles from './NewsCard.module.scss';
 import { Paper } from '@mui/material';
 
-const NewsCard = () => {
+const NewsCard = ({ article }) => {
   return (
     <a key={index} href={article.url} className={styles.newsCardLink}>
       <Paper

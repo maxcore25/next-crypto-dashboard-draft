@@ -1,0 +1,16 @@
+.newsCardLink {
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  .newsCard {
+    padding: 12px;
+    background: var(--bg-link-clr);
+
+    .cardTitle {
+      color: var(--accent-clr);
+    }
+  }
+}
