@@ -3,7 +3,7 @@ import { Paper } from '@mui/material';
 
 const NewsCard = ({ article }) => {
   return (
-    <a key={index} href={article.url} className={styles.newsCardLink}>
+    <a href={article.url} className={styles.newsCardLink}>
       <Paper
         elevation={3}
         sx={{ borderRadius: '12px' }}
