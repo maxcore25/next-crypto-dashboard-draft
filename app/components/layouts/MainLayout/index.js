@@ -6,6 +6,19 @@ import { useContext, useEffect } from 'react';
 import { LOCAL_STORAGE_VARIABLES } from '../../../constants';
 import CurrencyConverterBlock from '../../modules/CurrencyConverterBlock';
 import NewsFeedBlock from '../../modules/NewsFeedBlock';
+import { motion } from 'framer-motion';
+
+const scaleAnimationVariants = {
+  hidden: { opacity: 0, scale: 0.5 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      delay: 0.5,
+    },
+  },
+};
 
 const MainLayout = () => {
   const { isDarkTheme, setIsDarkTheme } = useContext(MainLayoutContext);
@@ -42,7 +55,13 @@ const MainLayout = () => {
       <CustomHead />
       <Header />
       <section className={styles.section}>
-        <h1 className={styles.title}>Crypto Dashboard</h1>
+        <motion.h1
+          className={styles.title}
+          variants={scaleAnimationVariants}
+          initial='hidden'
+          animate='visible'>
+          Crypto Dashboard
+        </motion.h1>
         <main className={styles.content}>
           <CurrencyConverterBlock />
           <NewsFeedBlock />
