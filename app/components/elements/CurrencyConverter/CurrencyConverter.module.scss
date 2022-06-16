@@ -20,11 +20,11 @@
   }
 
   label {
-    color: var(--text-clr) !important;
+    color: var(--input-clr) !important;
   }
 
   fieldset {
-    border-color: var(--text-clr) !important;
+    border-color: var(--input-clr) !important;
   }
 
   &:hover fieldset {
@@ -53,11 +53,11 @@
   }
 
   svg {
-    color: var(--text-clr);
+    color: var(--input-clr);
   }
 
   fieldset {
-    border-color: var(--text-clr);
+    border-color: var(--input-clr);
   }
 
   &:hover fieldset {

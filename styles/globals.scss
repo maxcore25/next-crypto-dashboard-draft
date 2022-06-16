@@ -16,7 +16,8 @@
   --accent-clr: #2f8af5;
   --title-clr: #000;
   --text-clr: #000;
-  --text-disabled-clr: #00000065;
+  --input-clr: #00000065;
+  --text-disabled-clr: #0000003b;
   --bg-lvl-1-clr: #fff;
   --bg-lvl-2-clr: #fff;
   --bg-lvl-3-clr: #fff;
@@ -28,6 +29,7 @@
 :root[data-theme='dark'] {
   --title-clr: #ffffff;
   --text-clr: #bebebe;
+  --input-clr: #bebebe;
   --text-disabled-clr: #bebebe8a;
   --bg-lvl-1-clr: #1f1b1b;
   --bg-lvl-2-clr: #2e2828;
