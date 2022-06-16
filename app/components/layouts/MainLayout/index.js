@@ -1,11 +1,11 @@
 import styles from './MainLayout.module.scss';
 import CustomHead from '../../elements/CustomHead';
-import NewsFeed from '../../elements/NewsFeed';
 import Header from '../../modules/Header';
 import { MainLayoutContext } from '../../../context';
 import { useContext, useEffect } from 'react';
 import { LOCAL_STORAGE_VARIABLES } from '../../../constants';
 import CurrencyConverterBlock from '../../modules/CurrencyConverterBlock';
+import NewsFeedBlock from '../../modules/NewsFeedBlock';
 
 const MainLayout = () => {
   const { isDarkTheme, setIsDarkTheme } = useContext(MainLayoutContext);
@@ -45,7 +45,7 @@ const MainLayout = () => {
         <h1 className={styles.title}>Crypto Dashboard</h1>
         <main className={styles.content}>
           <CurrencyConverterBlock />
-          <NewsFeed />
+          <NewsFeedBlock />
         </main>
       </section>
     </>
