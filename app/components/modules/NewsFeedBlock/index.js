@@ -44,7 +44,7 @@ const NewsFeedBlock = () => {
           ) : (
             <div className={styles.newsGrid}>
               {articles?.map((article, index) => (
-                <NewsCard key={index} article={article} />
+                <NewsCard key={index} article={article} index={index} />
               ))}
             </div>
           )}
