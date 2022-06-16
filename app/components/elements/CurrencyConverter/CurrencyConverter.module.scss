@@ -1,5 +1,6 @@
 .muiPaper {
   background: var(--bg-lvl-3-clr);
+  transition: var(--theme-animation);
 
   .inputsGrid {
     display: grid;

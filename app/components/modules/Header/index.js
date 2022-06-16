@@ -17,7 +17,9 @@ const Header = () => {
       initial='hidden'
       animate='visible'>
       <div className={styles.contentContainer}>
-        <a href='https://github.com/maxcore25/next-crypto-dashboard-draft'>
+        <a
+          href='https://github.com/maxcore25/next-crypto-dashboard-draft'
+          className={styles.link}>
           GitHub
         </a>
         <IconButton

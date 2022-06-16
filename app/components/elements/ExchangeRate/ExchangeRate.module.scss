@@ -2,6 +2,7 @@
   display: grid;
   place-content: center;
   background: var(--bg-lvl-3-clr);
+  transition: var(--theme-animation);
 }
 
 .mainGrid {
@@ -10,30 +11,23 @@
   gap: 32px;
   padding: 16px;
   text-align: center;
+  transition: var(--theme-animation);
 
   .title {
     text-align: center;
     color: var(--title-clr);
+    transition: var(--theme-animation);
   }
 
   .exchangeRate {
     font-weight: 900;
     font-size: 1.5rem;
     color: var(--title-clr);
+    transition: var(--theme-animation);
   }
 
   .exchangedData {
     color: var(--text-clr);
-  }
-
-  .inputsGrid {
-    display: grid;
-    gap: 24px;
-
-    .inputContainer {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 16px;
-    }
+    transition: var(--theme-animation);
   }
 }

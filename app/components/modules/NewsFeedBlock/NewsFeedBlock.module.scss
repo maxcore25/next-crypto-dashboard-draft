@@ -1,6 +1,7 @@
 .muiPaper {
   height: 100%;
   background: var(--bg-lvl-2-clr);
+  transition: var(--theme-animation);
 }
 
 .mainGrid {
@@ -13,6 +14,7 @@
   .title {
     text-align: center;
     color: var(--title-clr);
+    transition: var(--theme-animation);
   }
 
   .newsGrid {

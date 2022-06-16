@@ -8,6 +8,7 @@
   width: 100%;
   padding: 16px 26px;
   background: var(--bg-lvl-1-clr);
+  transition: var(--theme-animation);
   z-index: 5;
 
   .contentContainer {
@@ -17,4 +18,8 @@
     width: 100%;
     width: var(--max-width);
   }
+}
+
+.link {
+  color: var(--accent-clr);
 }

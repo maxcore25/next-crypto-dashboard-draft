@@ -8,6 +8,7 @@
   .newsCard {
     padding: 12px;
     background: var(--bg-link-clr);
+    transition: var(--theme-animation);
 
     .cardTitle {
       color: var(--accent-clr);
