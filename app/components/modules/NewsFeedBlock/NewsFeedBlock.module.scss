@@ -7,6 +7,7 @@
   // grid-template-rows: auto 1fr 1fr;
   gap: 16px;
   padding: 16px;
+  height: 100%;
 
   .title {
     text-align: center;
@@ -16,5 +17,16 @@
   .newsGrid {
     display: grid;
     gap: 16px;
+  }
+}
+
+.buttonGrid {
+  display: grid;
+  place-content: center;
+}
+
+.muiButton {
+  button {
+    width: fit-content;
   }
 }
