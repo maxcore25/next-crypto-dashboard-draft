@@ -1,12 +1,9 @@
 import styles from './NewsCard.module.scss';
 import { Paper } from '@mui/material';
 import { motion } from 'framer-motion';
-import {
-  listVariants,
-  scaleAnimationVariants,
-} from '../../../utils/animationVariants';
+import { scaleAnimationVariants } from '../../../utils/animationVariants';
 
-const NewsCard = ({ article, index }) => {
+const NewsCard = ({ article }) => {
   return (
     <motion.a
       href={article.url}
