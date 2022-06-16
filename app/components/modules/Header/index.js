@@ -5,16 +5,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { useContext } from 'react';
 import { MainLayoutContext } from '../../../context';
 import { motion } from 'framer-motion';
-
-const pVariants = {
-  hidden: { y: '-100%' },
-  visible: {
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
+import { fallVariants } from '../../../utils/animationVariants';
 
 const Header = () => {
   const { isDarkTheme, handleSwitchTheme } = useContext(MainLayoutContext);
@@ -22,7 +13,7 @@ const Header = () => {
   return (
     <motion.header
       className={styles.header}
-      variants={pVariants}
+      variants={fallVariants}
       initial='hidden'
       animate='visible'>
       <div className={styles.contentContainer}>

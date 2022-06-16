@@ -7,18 +7,7 @@ import { LOCAL_STORAGE_VARIABLES } from '../../../constants';
 import CurrencyConverterBlock from '../../modules/CurrencyConverterBlock';
 import NewsFeedBlock from '../../modules/NewsFeedBlock';
 import { motion } from 'framer-motion';
-
-const scaleAnimationVariants = {
-  hidden: { opacity: 0, scale: 0.5 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.5,
-      delay: 0.5,
-    },
-  },
-};
+import { scaleAnimationVariants } from '../../../utils/animationVariants';
 
 const MainLayout = () => {
   const { isDarkTheme, setIsDarkTheme } = useContext(MainLayoutContext);
