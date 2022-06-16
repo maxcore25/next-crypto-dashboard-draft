@@ -48,7 +48,8 @@ const MainLayout = () => {
           className={styles.title}
           variants={scaleAnimationVariants}
           initial='hidden'
-          animate='visible'>
+          animate='visible'
+          transition={{ delay: 0.5 }}>
           Crypto Dashboard
         </motion.h1>
         <main className={styles.content}>
