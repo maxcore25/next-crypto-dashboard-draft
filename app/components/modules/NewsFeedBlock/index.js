@@ -6,8 +6,10 @@ import NewsCard from '../../elements/NewsCard';
 
 const NewsFeedBlock = () => {
   const [articles, setArticles] = useState();
+  const [isClicked, setIsClicked] = useState(false);
 
   const getNews = () => {
+    setIsClicked(!isClicked);
     axios.get('/api/crypto-news').then(response => {
       console.log('NewsFeed api:', response.data);
       setArticles(response.data.slice(0, 7));
@@ -21,19 +23,22 @@ const NewsFeedBlock = () => {
       sx={{ borderRadius: '12px' }}>
       <div className={styles.mainGrid}>
         <h2 className={styles.title}>News Feed</h2>
-        <div className={styles.buttonGrid}>
-          <Button
-            className={styles.muiButton}
-            onClick={() => getNews()}
-            variant='contained'>
-            Get News
-          </Button>
-        </div>
-        <div className={styles.newsGrid}>
-          {articles?.map((article, index) => (
-            <NewsCard key={index} article={article} />
-          ))}
-        </div>
+        {isClicked ? (
+          <div className={styles.newsGrid}>
+            {articles?.map((article, index) => (
+              <NewsCard key={index} article={article} />
+            ))}
+          </div>
+        ) : (
+          <div className={styles.buttonGrid}>
+            <Button
+              className={styles.muiButton}
+              onClick={() => getNews()}
+              variant='contained'>
+              Get News
+            </Button>
+          </div>
+        )}
       </div>
     </Paper>
   );
