@@ -32,13 +32,7 @@ const NewsFeedBlock = () => {
         sx={{ borderRadius: '12px' }}>
         <div className={styles.mainGrid}>
           <h2 className={styles.title}>News Feed</h2>
-          {isClicked ? (
-            <div className={styles.newsGrid}>
-              {articles?.map((article, index) => (
-                <NewsCard key={index} article={article} />
-              ))}
-            </div>
-          ) : (
+          {!isClicked ? (
             <div className={styles.buttonGrid}>
               <Button
                 className={styles.muiButton}
@@ -46,6 +40,12 @@ const NewsFeedBlock = () => {
                 variant='contained'>
                 Get News
               </Button>
+            </div>
+          ) : (
+            <div className={styles.newsGrid}>
+              {articles?.map((article, index) => (
+                <NewsCard key={index} article={article} />
+              ))}
             </div>
           )}
         </div>
