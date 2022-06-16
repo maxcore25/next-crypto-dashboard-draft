@@ -1,7 +1,7 @@
 .muiPaper {
   display: grid;
   place-content: center;
-  background: var(--bg-lvl-3-clr);
+  background: var(--bg-lvl-3-clr) !important;
   transition: var(--theme-animation);
 }
 
